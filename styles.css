@@ -38,6 +38,43 @@ nav a:hover {
     color: #5900FF;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
 /* Hero Section */
 section.hero {
     text-align: center;
