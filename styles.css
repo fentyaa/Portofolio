@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins';
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* Section */
+section {
+    padding: 50px;
+    text-align: left;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #5900FF;
+}
+
+/* Hero Section */
+section.hero {
+    text-align: center;
+    padding: 100px 50px;
+    background-color: #1a1a1a;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #5900FF;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #b3b3b3;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(89, 0, 255, 0.3);
+}
+
+/* Testimonials */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(89, 0, 255, 0.3);
+}
+
+/* Portfolio */
+.portfolio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.portfolio-card {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(89, 0, 255, 0.3);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #5900FF;
+}
+
+.contact-form button {
+    background-color: #5900FF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3d00b7;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #5900FF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: #d8b4fe;
+}
