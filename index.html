@@ -18,28 +18,39 @@
             <nav>
                 <a href="#">Beranda</a>
                 <a href="#">Tentang</a>
+                <a href="#">Keahlian</a>
                 <a href="#">Portofolio</a>
                 <a href="#">Kontak</a>
             </nav>
         </header>
 
         <section>
-            <h2>Hai, Saya Fenty Anggraeni</h2>
-            <h3>Desainer UI yang Mengubah Ide Menjadi Visual Menarik</h3>
-            <p>Saya seorang desainer UI yang berfokus pada menciptakan pengalaman digital yang menarik dan intuitif. Dengan keahlian dalam desain responsif dan user experience, saya siap membantu menghadirkan tampilan yang menarik dan mudah digunakan.</p>
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>Hai, Saya <span style="color: #b366ff;">Fenty Anggraeni</span></h1>
+                    <h3>Desainer UI yang Mengubah Ide Menjadi Visual Menarik</h3>
+                    <p>Saya seorang desainer UI yang berfokus pada menciptakan pengalaman digital yang menarik dan intuitif. Dengan keahlian dalam desain responsif dan user experience, saya siap membantu menghadirkan tampilan yang menarik dan mudah digunakan.</p>
+                </div>
+                <img src="ilustrasi.png" alt="Ilustrasi Desain UI">
+            </div>
             
             <br><br>
 
-            <div class="skills">
-                <h2> Keahlian</h2>
+            <h2> Keahlian</h2>
+            <div class="keahlian">
                 <div class="skill-card">
                     <h4>Desain</h4>
+                    <img src="assets/images/canva.png" alt="Canva" class="skill-icon">
                     <p>Canva (90%)</p>
+                    <img src="assets/images/figma.png" alt="Figma" class="skill-icon">
                     <p>Figma (85%)</p>
                 </div>
                 <div class="skill-card">
                     <h4>Web Development</h4>
+                    <img src="assets/images/html.png" alt="HTML5" class="skill-icon">
+                    <img src="assets/images/css.png" alt="CSS3" class="skill-icon">
                     <p>HTML & CSS (80%)</p>
+                    <img src="assets/images/js.png" alt="JavaScript" class="skill-icon">
                     <p>JavaScript (70%)</p>
                 </div>
                 <div class="skill-card">
@@ -51,12 +62,12 @@
 
             <br><br>
 
-            <h3>Kenapa Harus Bekerja Dengan Saya?</h3>
+            <h2>Kenapa Harus Bekerja Dengan Saya?</h2>
             <p>"Kreativitas, detail, dan efisiensi adalah kunci dalam setiap desain yang saya buat. Saya selalu memastikan setiap proyek tidak hanya menarik secara visual tetapi juga berfungsi dengan optimal di berbagai perangkat."</p>
 
             <br><br>
 
-            <h3>Testimoni Client</h3>
+            <h2>Testimoni Client</h2>
             <div class="testimonials">
                 <div class="testimonial-card">
                     <p>“Terima kasih atas kerja sama yang luar biasa.”</p>
@@ -74,7 +85,7 @@
 
             <br><br>
 
-            <h3>Portofolio</h3>
+            <h2>Portofolio</h2>
             <div class="portfolio">
                 <div class="portfolio-card">
                     <h4>Desain</h4>
@@ -90,36 +101,70 @@
 
         <br><br>
 
-        <section>
-            <h3>Kontak</h3>
-            <p>Hubungi Saya di Kontak ini!</p>
-            <div class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="text" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
+        <section class="contact-section">
+            <h2>KONTAK</h2>
+            <div class="contact-container">
+                <!-- Formulir Kontak -->
+                <div class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <div class="input-group">
+                        <input type="text" placeholder="Phone Number" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <textarea placeholder="Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+        
+                <!-- Informasi Kontak -->
+                <div class="contact-info">
+                    <h3>Hubungi Saya di Kontak ini!</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <p><strong>Address</strong><br>Kota Tasikmalaya, Jawa Barat, Indonesia</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <p><strong>Phone Number</strong><br>+62XXXXXXXXXXX</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </section>        
 
         <br><br>
 
-        <footer>
-            <p>Tautan</p>
-            <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Kontak</a></li>
-            </ul>
-            <p>&copy; 2025 MyPortfolio. Semua Hak Dilindungi.</p>
-            <div>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Hak Cipta -->
+                <div class="footer-section">
+                    <h4>Hak Cipta</h4>
+                    <p>&copy; 2025 My Portfolio. Semua Hak Dilindungi.</p>
+                </div>
+        
+                <!-- Tautan -->
+                <div class="footer-section">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Ikon Sosial Media -->
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </footer>        
 
         <script src="script.js"></script>
     </body>

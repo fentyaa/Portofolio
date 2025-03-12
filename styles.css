@@ -16,6 +16,60 @@ header {
     padding: 20px 50px;
 }
 
+/* Styling untuk bagian perkenalan */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #121212;
+    color: white;
+}
+
+.intro-text {
+    max-width: 50%;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b366ff; /* Warna ungu */
+}
+
+.intro h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.intro img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    .intro img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
 /* Section */
 section {
     padding: 50px;
@@ -87,6 +141,10 @@ section.hero {
     color: #5900FF;
 }
 
+h2 {
+    text-align: center;
+}
+
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
@@ -95,7 +153,7 @@ section.hero {
 }
 
 /* Skills Section */
-.skills {
+.keahlian {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -110,6 +168,12 @@ section.hero {
     width: 250px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(89, 0, 255, 0.3);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 /* Testimonials */
@@ -149,53 +213,144 @@ section.hero {
 }
 
 /* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+.contact-section {
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 0;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 80%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1a1a1a;
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid white;
+    background: transparent;
     color: white;
-    border: 1px solid #5900FF;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    width: 50%;
 }
 
 .contact-form button {
-    background-color: #5900FF;
+    background: #6a0dad;
     color: white;
-    padding: 12px 24px;
     border: none;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #3d00b7;
+    background: #5a0cac;
+}
+
+.contact-info {
+    text-align: left;
+    width: 40%;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #6a0dad;
 }
 
 /* Footer */
-footer {
-    background-color: #1a1a1a;
+.footer {
+    background: #ede3f5;
+    padding: 20px 0;
     text-align: center;
-    padding: 30px;
-    margin-top: 30px;
+    color: black;
 }
 
-footer a {
-    color: #5900FF;
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1rem;
+    color: black;
 }
 
-footer a:hover {
-    color: #d8b4fe;
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    background: #6a0dad;
+    color: white;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #5a0cac;
 }
