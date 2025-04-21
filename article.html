@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - Tips Desain UI untuk Pemula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3e8ff;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #a855f7, #d8b4fe);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #9333ea;
+        }
+        .navbar-brand, .nav-link {
+            font-family: 'Quicksand', sans-serif;
+            color: #fff !important;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #f9a8d4 !important;
+        }
+        .section {
+            padding: 80px 0;
+            background-color: #fff;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .section h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #a855f7;
+        }
+        .section h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #a855f7;
+        }
+        .article-header-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 5px solid #d8b4fe;
+        }
+        .card {
+            background-color: #f9f5ff;
+            border: 2px solid #d8b4fe;
+            border-radius: 20px;
+            color: #333;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
+        }
+        .btn-primary {
+            background-color: #a855f7;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 50px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #9333ea;
+            transform: scale(1.1);
+        }
+        .btn-secondary {
+            background-color: #d8b4fe;
+            border: 2px solid #a855f7;
+            color: #a855f7;
+            padding: 10px 20px;
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #c084fc;
+            transform: scale(1.1);
+        }
+        .form-control {
+            background-color: #f9f5ff;
+            border: 2px solid #d8b4fe;
+            color: #333;
+            border-radius: 15px;
+            padding: 12px;
+        }
+        .form-control:focus {
+            background-color: #fff;
+            border-color: #a855f7;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+        }
+        /* Comments Section */
+        .comment-card {
+            display: flex;
+            align-items: flex-start;
+            background-color: #f9f5ff;
+            border: 2px solid #d8b4fe;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            box-shadow: 0 5px 10px rgba(168, 85, 247, 0.1);
+        }
+        .comment-card::before {
+            content: '💬';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 1.5rem;
+        }
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 3px solid #d8b4fe;
+        }
+        .comment-content {
+            flex: 1;
+        }
+        .comment-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .comment-content strong {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            color: #a855f7;
+        }
+        .comment-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .reply-btn {
+            background: none;
+            border: none;
+            color: #a855f7;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .reply-btn:hover {
+            color: #9333ea;
+        }
+        .error {
+            color: #f87171;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MY PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portofolio">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Section -->
+    <section class="section">
+        <div class="container">
+            <h1 data-aos="fade-up">Tips Desain UI untuk Pemula 🌟</h1>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Article Header" class="article-header-img" data-aos="fade-up" data-aos-delay="100">
+            <p data-aos="fade-up" data-aos-delay="200">Belajar dasar-dasar desain UI yang efektif untuk meningkatkan pengalaman pengguna. Dalam artikel ini, kita akan membahas...</p>
+            <p data-aos="fade-up" data-aos-delay="300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+
+            <!-- Share Buttons -->
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                <h5>Bagikan Yuk! 💌</h5>
+                <a href="#" class="btn btn-primary me-2">Facebook</a>
+                <a href="#" class="btn btn-primary me-2">Twitter</a>
+                <a href="#" class="btn btn-primary">LinkedIn</a>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="d-flex justify-content-between mb-3" data-aos="fade-up" data-aos-delay="500">
+                <a href="#" class="btn btn-secondary">Artikel Sebelumnya</a>
+                <a href="#" class="btn btn-secondary">Artikel Selanjutnya</a>
+            </div>
+
+            <!-- Rekomendasi Artikel -->
+            <h3 data-aos="fade-up">Rekomendasi Artikel Lainnya 📚</h3>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card p-3 mb-3">
+                        <h5>Mengapa UX Penting?</h5>
+                        <p>Pengalaman pengguna adalah kunci sukses produk digital...</p>
+                        <a href="#" class="btn btn-primary">Baca Yuk! ✨</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card p-3 mb-3">
+                        <h5>Cara Membuat Desain Responsif</h5>
+                        <p>Pelajari cara membuat desain yang responsif untuk semua perangkat...</p>
+                        <a href="#" class="btn btn-primary">Baca Yuk! ✨</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Komentar Pengunjung -->
+            <h3 data-aos="fade-up">Komentar Teman-Teman 💬</h3>
+            <div id="commentsList">
+                <div class="comment-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1640964828962-387658ed25e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Hijab Avatar" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-meta">
+                            <strong>John Doe</strong> - 10 April 2025
+                        </div>
+                        <p>Artikel yang sangat membantu! Terima kasih atas tipsnya. 💜</p>
+                        <button class="reply-btn">Balas</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Komentar -->
+            <h3 data-aos="fade-up">Tinggalkan Komentar Yuk! 🌸</h3>
+            <form id="commentForm" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-3">
+                    <label for="commentName" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="commentName">
+                    <span class="error" id="commentNameError">Nama wajib diisi</span>
+                </div>
+                <div class="mb-3">
+                    <label for="commentText" class="form-label">Komentar</label>
+                    <textarea class="form-control" id="commentText" rows="3"></textarea>
+                    <span class="error" id="commentTextError">Komentar wajib diisi</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Komentar! 💌</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Comment Form Submission
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Reset error messages
+            document.querySelectorAll('.error').forEach(error => error.style.display = 'none');
+
+            // Get form values
+            const name = document.getElementById('commentName').value.trim();
+            const comment = document.getElementById('commentText').value.trim();
+
+            // Validation
+            let isValid = true;
+            if (!name) {
+                document.getElementById('commentNameError').style.display = 'block';
+                isValid = false;
+            }
+            if (!comment) {
+                document.getElementById('commentTextError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Create new comment
+                const commentList = document.getElementById('commentsList');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment-card');
+                newComment.setAttribute('data-aos', 'fade-up');
+                newComment.innerHTML = `
+                    <img src="https://images.unsplash.com/photo-1640964828962-387658ed25e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Hijab Avatar" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-meta">
+                            <strong>${name}</strong> - ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+                        </div>
+                        <p>${comment}</p>
+                        <button class="reply-btn">Balas</button>
+                    </div>
+                `;
+                commentList.appendChild(newComment);
+
+                // Reset form
+                document.getElementById('commentForm').reset();
+
+                // Reinitialize AOS for new elements
+                AOS.refresh();
+            }
+        });
+    </script>
+</body>
+</html>
